@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header h1.brand-name {
+  margin: 1rem;
+}
+header nav ul li {
+  display: inline;
+}/*# sourceMappingURL=index.css.map */
