@@ -1,0 +1,177 @@
+
+@import "colors";
+@import "components";
+
+*{
+    margin:0;
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    position: absolute;
+    width:100%;
+
+    *{
+        color:white;
+    }
+
+    h1.brand-name{
+        margin:1rem;
+        cursor:pointer;
+        color:$primaryColor;
+
+        @media screen and(max-width:480px) {
+            font-size:20px;
+        }
+    }
+
+    nav{
+        ul{
+            margin-right:20px;
+
+            @media screen and(max-width:480px) {
+                margin-right: 5px;
+            }
+
+            li{
+                display: inline;
+
+                a{
+                    padding:5px 10px;
+                    margin:5px 3vw;
+                    cursor: pointer;
+                    font-size:18px;
+                    position: relative;
+                    background:radial-gradient(rgba(0,0,0,0.3) 30%,rgba(0,0,0,0.05));
+
+                    &:hover{
+                        background: white;
+                        color:black;
+                        border-radius: 5px;
+                    }
+                    @media screen and(max-width:480px) {
+                        padding: 5px;
+                        font-size:16px;
+                        
+                    }
+
+                    @media screen and(max-width:320px){
+                        margin:5px 1vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.background{
+    background: url("../images/pexels-athena-2582932.jpg");
+    background-position: 0% 50%;
+    height:100vh;
+    width:100%;
+    background-size: cover;
+    position: absolute;
+    z-index:-1;
+    filter:brightness(60%);
+}
+
+.radialGradient{
+    @extend .background;
+    background:radial-gradient(rgba(0,0,0,0),rgba(0,0,0,0.2))
+}
+
+section.section1{
+    height:100vh;
+
+    h1{
+        text-align: center;
+        position: relative;
+        top:40%;
+        color:white;
+        font-size:40px;
+
+        @media screen and(max-width:720px){
+            font-size: 30px;
+        }
+        @media screen and(max-width:480px){
+            font-size: 20px;
+        }
+        
+        background:radial-gradient(rgba(0,0,0,0.6) 30%,rgba(0,0,0,0.05)); 
+        
+        span{
+            color:$flashyBlue;
+        }
+
+        
+    }
+    button.btn{
+        position: relative;
+        top:70%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        font-size:40px;
+        background:$primaryColor;
+        border-radius: 10px;
+        padding:10px 20px;
+        // color:white;
+        font-weight:bold;
+
+
+        @media screen and(max-width:720px) {
+            font-size:30px;
+            padding:5px 10px;
+        }
+        @media screen and(max-width:480px) {
+            font-size:20px;
+            padding:5px 10px;
+        }
+    }
+    
+}
+
+section.section2{
+    background:#161616;
+    width:100%;
+    
+    h2{
+        color:rgb(223, 223, 223);
+    }
+
+    p{
+        color:rgb(180, 180, 180);
+    }
+    
+    div.prosWrapper{
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+        width:clamp(300px,100%,1200px);
+        // width:100%;
+
+        padding:0 clamp(0.1%,1%,100px);
+        display: flex;
+        flex-direction: row;
+        // flex-basis:600px;
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content: space-around;
+        flex-grow:1;
+    }
+    div.pro{
+        padding:50px;
+        width:450px;
+        // min-width:450px;
+        display: flex;
+
+        i{
+            color:white;
+            padding-right:20px;   
+        }
+    }
+}
